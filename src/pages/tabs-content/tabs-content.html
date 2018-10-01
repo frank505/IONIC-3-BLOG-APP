@@ -1,0 +1,47 @@
+<!--
+  Generated template for the TabsContentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>TabsContent</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+    <ion-card class="card-background-page"
+     style="width:90%;margin-left:5%;
+     margin-right:5%;margin-top:30px;
+     background:black;color:white;"  *ngFor="let items of result">
+     <ion-icon name="arrow-dropright-circle"color="danger" (click)="videoPlayNowOnFullScreen(items.id)" class="icon-play-video"></ion-icon>
+      <video  style="height:200px;" src="{{ video }}/{{ items.video_name }}"></video>
+      <div class="card-title" text-center><b style="font-size:19px;">{{ items.header }}</b></div>
+      <div class="card-subtitle" text-center><ion-icon name="clipboard"></ion-icon><b>{{ items.archive_format }}</b></div>
+    </ion-card>
+
+
+
+
+
+
+
+  
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event,$id)" loadingSpinner="bubbles" loadingText="Loading Users...">
+       <ion-infinite-scroll-content></ion-infinite-scroll-content>
+     </ion-infinite-scroll>
+   
+   
+
+
+
+
+</ion-content>
+
+<ion-fab bottom right  (click)="navigateToSearchPage()">
+   <button ion-fab color="danger"><ion-icon name="search"></ion-icon></button>
+ </ion-fab>

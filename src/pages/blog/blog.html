@@ -1,0 +1,31 @@
+<!--
+  Generated template for the BlogPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+  
+<ion-content padding>
+    
+</ion-content>
+<ion-tabs *ngFor = "let items of TabDynamicItem; let i=index;" >
+    <ion-tab tabTitle="{{ items[i] }}" [root]="TabDynamicItem[index]"  ></ion-tab>
+  </ion-tabs>
+
+
+-->
+<ion-header >
+    <ion-navbar color="danger">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Blog</ion-title>
+          </ion-navbar>
+  </ion-header>
+
+  <super-tabs tabsPlacement="top"  toolbarColor="light" indicatorColor="light" toolbarBackground="danger">
+<super-tab  *ngFor = "let items of TabDynamicItem"  [title]="items.title" [root]="items.component"></super-tab>
+ </super-tabs>  
+        
+
+  

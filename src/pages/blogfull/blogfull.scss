@@ -1,0 +1,32 @@
+page-blogfull {
+    .extra-header-style{
+        padding-top:5px !important;padding-bottom:10px;background:#488aff;margin-top:0px;position:fixed;
+    }
+    .contents-here{margin-top:53px;}
+    .content-post{width:100%;word-wrap: break-word;font-size:13px;text-align:justify;margin-top:0px;}
+    .img-full{height:200px;max-height:200px;width:100%;margin: 0;padding: 0;left: 0;right: 0;position: absolute;}
+.img_up{width:100%;}
+.vid_up{width:100%;}
+    .test-me{width:30%  !important}
+    @media screen and (max-width:600px){
+        .toolbar-title {
+            display: block;
+            overflow: visible;
+            width: 400px;
+            text-overflow: unset;
+            white-space: unset;
+            word-wrap: break-word;
+        }
+    }
+    @media screen and (max-width:500px){
+        .toolbar-title {
+            width: 330px;
+        }
+    }
+
+    @media screen and (max-width:300px){
+        .toolbar-title {
+            width: 300px;
+        }
+    }
+}

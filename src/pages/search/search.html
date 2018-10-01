@@ -1,0 +1,40 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+<ion-content padding>
+  <ion-navbar>
+      <ion-searchbar placeholder="search by name of articles" (keyup.enter)="search()" [(ngModel)]="search_content"></ion-searchbar>             
+  </ion-navbar>
+      <div class="contents-here">    
+        <ion-list style="margin-top:50px;">
+          <ion-item *ngFor="let items of result"  (click)="SendToFullContentPage(items.id,items.header)"  >
+            <ion-thumbnail item-left>
+              <img src="{{ image }}/{{ items.file_name }}">
+            </ion-thumbnail>
+            <h4 style="font-weight:bolder;">{{ items.header }}</h4>
+            <p> <b><span style="font-size:10px;">  <ion-icon name="eye"></ion-icon> {{ items.clicks }} views</span> 
+             &nbsp;&nbsp; <span style="font-size:10px;"> <ion-icon name="clipboard"></ion-icon> {{ items.month }}/{{ items.year }}</span> 
+    </b></p>
+          </ion-item>
+        </ion-list>
+        
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event,$id)" loadingSpinner="bubbles" loadingText="Loading Users...">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+        
+        
+    
+    
+      </div>
+    
+
+
+
+
+</ion-content>
+

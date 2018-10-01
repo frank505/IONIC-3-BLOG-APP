@@ -1,0 +1,107 @@
+<ion-header >
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-header color="dark">
+      <ion-slides style="max-height:200px;height:200px;" pager="true" autoplay="10000" loop="true" >
+          <ion-slide>
+            <img src="../../assets/MyAppImg/paypal (1).jpg" alt="" style="max-height:200px;height:200px;width:100%;" srcset="">
+            <div class="absolute-content">
+                <h3>Customer Satisfaction</h3>
+                <p>Customers satisfaction is one of our core values as we place you first in every service we render to you</p>
+              </div>
+          </ion-slide>
+          <ion-slide>
+            <img src="../../assets/MyAppImg/paypal (2).jpg" alt="" srcset="" style="max-height:200px;height:200px;width:100%;">
+            <div class="absolute-content">
+                <h3>Build your dream</h3>
+                <p>With a wide variety off services that we offer on techmiz we help people build thier dream and bussiness by giving them platforms on different avaialable platforms today.</p>
+              </div>
+          </ion-slide>
+          <ion-slide>
+            <img src="../../assets/MyAppImg/paypal (3).jpg" alt="" srcset="" style="max-height:200px;height:200px;width:100%;">
+            <div class="absolute-content">
+                <h3>Path to Your Success</h3>
+                <p>Its Our joy to always be a part to your success and has always been for us this past years thanks for giving us the opurtunity</p>
+              </div>
+          </ion-slide>
+        </ion-slides>
+  
+  </ion-header>
+
+  
+
+
+      <ion-grid style="margin-top:200px;">
+          <ion-row>
+            <ion-col col-6>
+                <ion-card>
+                    <ion-card-content text-center> 
+                      <ion-icon name="home" class="ion-resize"></ion-icon><br>
+                           <b class="ion-item-link">Home</b> 
+                    </ion-card-content>
+                  </ion-card>
+    
+            </ion-col>
+            <ion-col col-6>
+
+                <ion-card (click)="GoToServicePage()">
+                    <ion-card-content text-center> 
+                        <ion-icon name="cog" class="ion-resize"></ion-icon><br>
+                             <b class="ion-item-link">Services</b> 
+                      </ion-card-content>
+                    
+                  </ion-card>
+    
+
+
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col col-6>
+                <ion-card>
+    
+                    <ion-card-content text-center (click)="GoToBlogPage()"> 
+                        <ion-icon name="add-circle" class="ion-resize"></ion-icon><br>
+                             <b class="ion-item-link">More</b> 
+                      </ion-card-content>
+                    
+                  </ion-card>                      
+            </ion-col>
+            <ion-col col-6>
+                <ion-card>
+      
+                    <ion-card-content text-center  (click)="GoToAboutUsPage()"> 
+                        <ion-icon name="information-circle" class="ion-resize"></ion-icon><br>
+                             <b class="ion-item-link">About</b> 
+                      </ion-card-content>
+                    
+                  
+                  </ion-card>
+    
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+    
+    
+        <ion-fab bottom right (click)="GoToMessageMePage()" >
+            <button ion-fab color="danger"><ion-icon name="create"></ion-icon></button>
+          </ion-fab>
+        
+
+
+
+  
+   
+
+   <ion-footer text-center>
+          Copyright ©{{ year }} Techmiz <br> All Rights Reserved
+   </ion-footer>
+
+</ion-content>

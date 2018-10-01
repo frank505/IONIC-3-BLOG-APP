@@ -1,0 +1,44 @@
+<!--
+  Generated template for the MessagemePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header >
+    <ion-navbar color="danger">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Send Us A Message</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label floating>name</ion-label>
+        <ion-input type="text" [(ngModel)]="user_name" required ></ion-input><br>
+      
+      </ion-item>  
+
+
+      <ion-item>
+        <ion-label floating>email</ion-label>
+        <ion-input type="email" [(ngModel)]="user_email" required ></ion-input><br>
+      
+      </ion-item>  
+   <ion-item>
+     <ion-label floating>subject</ion-label>
+     <ion-input type="text" [(ngModel)]="user_subject" required ></ion-input>
+       </ion-item>
+   <ion-item >
+     <ion-label floating>message</ion-label>
+     <ion-textarea  [(ngModel)]="user_message" ></ion-textarea> 
+   </ion-item><br>
+   
+      <button ion-button  full color="danger" (click)="Submit()" >Submit</button>
+      
+    
+    
+</ion-content>

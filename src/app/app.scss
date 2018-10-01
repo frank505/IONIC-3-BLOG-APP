@@ -1,0 +1,54 @@
+// http://ionicframework.com/docs/theming/
+.img-nav {
+    border-radius: 50% !important;
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+.t-log{font-size: 60px;font-weight: bolder;font-family: tahom;color: red;}
+.full-text{position: absolute;
+    margin-top: 35px;
+    margin-left: -10px;
+    font-weight: bolder;
+    color: red;
+    font-size: 20px;}
+    .logo{margin-left: -28%;padding-bottom: 30px;}
+.overlay{
+    position: absolute;
+    top:0;bottom: 0;left: 0;z-index:0;opacity:0.9;width:100%;height:100%;background: #2388de66;
+}
+.side-img{
+    color:white;
+}
+.change-color > .toolbar-title{color:#488aff !important;}
+.raise-me{z-index:2;}
+.side-img > .toolbar-background{
+background-image: url("../assets/MyAppImg/back.png") !important;
+background-repeat: no-repeat;
+background-size: cover;
+z-index:-1;
+height:100px;
+}
+page-tabs-main > ion-header > ion-navbar{
+    display: none !important;height: 0px;position: fixed;
+}
+page-tabs-content > ion-header{
+    display: none !important;height: 0px;position: fixed;
+}
+super-tab > .ion-page > ion-header{
+    display: none !important;height: 0px;position: fixed;
+}
+.extra-header-style{margin-top:0px !important;}
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.

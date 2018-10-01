@@ -1,0 +1,32 @@
+<ion-menu [content]="content" >
+  <ion-header text-center >
+    <ion-toolbar  class="" color="danger">
+      <div class="logo">
+         <b class="t-logo" style="
+         
+         font-size: 60px !important;font-weight: bolder;font-family: tahom;color: red;
+          ">T</b>
+          <span class="full-text" 
+          style="position: absolute;margin-top: 35px;margin-left: -10px;font-weight: bolder;
+          color: red;font-size: 20px;
+         ">echbuildz</span> <span class="TM" 
+         style="color: red;position: absolute;margin-left: 18%;
+         margin-top: 28px; font-weight: lighter;font-size: 10px;">TM</span>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon [name]="p.icon" item-left></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

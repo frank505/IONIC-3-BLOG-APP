@@ -1,0 +1,10 @@
+page-home {
+.absolute-content{
+    position:absolute;top:50px;left:5%;right:5%;color:white;word-wrap: break-word;
+}
+.absolute-content > h3{color:rgb(228, 76, 126) !important;font-weight: bolder;}
+.absolute-content > p{font-size:11px;}
+}
+.ion-resize{font-size:300%;}
+.ion-item-link{font-size:15px;}
+.h3-service{border-bottom:2px solid black;}
